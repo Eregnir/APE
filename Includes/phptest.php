@@ -1,7 +1,18 @@
 <html>
-    <head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/audioplayer.css" />
+    <script src="jquery.js"></script>
+    <script src="audioplayer.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../CSS/APEStyle.css">
+    <div id="headerph"></div>
+    
+</head>
     <?php
     
         $servername = "localhost";
@@ -29,7 +40,7 @@
             </tr> -->
 
         <?php foreach ($result as $review): ?>
-                <div class="container row" style="background color: blue;">
+                <div class="container container2 container4 row" style="background color: blue;">
                     <div class="col-md-6">
                     <?php echo $review["review_title"]; ?>
                     </div>
