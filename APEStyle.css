@@ -1,0 +1,53 @@
+body {
+    background-image:url(background.jpg);
+    background-attachment: fixed;
+    }
+
+.aligncenter{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-topp{
+    margin-top: 25px;
+}
+
+.navbar {
+    margin-bottom: 10px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    max-height: 350px;
+}
+
+.about {
+    background-color:rgba(254,254,254,0.8);
+    border-radius: 2vh;
+    padding: auto;   
+}
+
+.container2{
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    background-color:rgba(254,254,254,0.9);
+    border-radius: 16px;
+}
+
+.container3{
+    background-color:rgba(25,25,25,0.2);
+    border-radius: 16px;    
+}
+
+img{
+    max-width: 600px;
+}
+
+.img2{
+    max-width:200px;
+    min-width: 200px;
+}

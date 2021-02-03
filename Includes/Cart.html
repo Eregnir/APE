@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<title>APE Gaming - Cart</title>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="../CSS/APEStyle.css">
+    <div id="headerph"></div>
+    
+</head>
+
+<body>
+        <div>
+            <!--Cart Intro-->
+            <div class="container container2_2">
+                <center>
+                    <h1>Thank you for shopping with us!</h1>
+                    <img src ="../Images/makeitrain.gif" style="width: 40%;">
+                </center>            
+            </div>
+            <div class="container container2 container4">
+                <h1>Cart</h1><br>
+                <div class = "row">
+                    <!--games in cart-->
+                    <div class ="col-lg-7 row">
+                        <div class="col-lg-6">
+                            <img alt ="Game" class="img2" src="../Images/PRO21.jpg">
+                        </div>
+                        <div class ="col-lg-6" style="display: block;">
+                            <h3>Cyberpunk 2077</h3>
+                            <p>
+                                <b>Description:</b> <br> This is a great game, you should play it!<br>
+                                <b>Price:</b> <br>$50.00<br><br>
+                                <b>Quantity:</b>
+                                <input  oninput="total()" style="margin-top: 4px;" id="q1" class="input-group-text" type="number" value=1 min=0 max=10>                          
+                            </p>
+                        </div>
+                        <hr class ="solid" style = "border-top: 3px solid #bbb; width:90%; ">
+                        <div class="col-lg-6">
+                            <img alt ="Game" class="img2" src="../Images/PRO21.jpg">
+                        </div>
+                        <div class ="col-lg-6" style="display: block;">
+                            <h3>Cyberpunk 2077</h3>
+                            <p>
+                                <b>Description:</b> <br> This is a great game, you should play it!<br>
+                                <b>Price:</b> <br>$50.00<br><br>
+                                <b>Quantity:</b>
+                                <input oninput="total()" style="margin-top: 4px;" id="q2" class="input-group-text" type="number" value=1 min=0 max=10>
+                            </p>
+                        </div>
+                    </div>
+                    <!--Cart Total-->
+                    <div class="col-md-5" style="float:right; border-radius: 16px; padding-top: 5%; margin-bottom: 10px;">
+                        <center>
+                            <h3><b>Total: $
+                                <span id = "demo">100</b></h3></span> <br><br>
+                            <button style="width:85%;" class="btn btn-primary"><h3>Proceed to checkout</h3></button>
+                        </center>
+                    </div>
+                    <div class ="col-lg-7 row">
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+        
+
+    <script type="text/javascript">
+        $(function(){
+            $("#headerph").load("header.html");
+        });
+        $(function(){
+            $("#footerph").load("footer.html");
+        });
+        </script>
+    
+    <script>
+        function total(){
+            var A = 50.00;
+            var B = document.getElementById("q1").value;
+            var C = document.getElementById("q2").value;
+            document.getElementById("demo").innerHTML = B*A + C*A;
+
+
+        }
+    </script>
+</body>
+
+<div id="footerph"></div>
+
+</html>
+
