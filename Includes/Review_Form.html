@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/audioplayer.css" />
+        <script src="jquery.js"></script>
+        <script src="audioplayer.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" type="text/css" href="../CSS/APEStyle.css">
+        <div id="headerph"></div>
+        
+    </head>
+<body>
+    <div class ="container container2" style="margin-top:15px;">
+        <div class="row">
+            <div class="col-sm-6">
+            <form name="Add a review!" method="post" action="Review_Form.php">
+               
+                    <label for="title">Reviewed Game:</label><br>
+                    <select id="title" name="title">
+                        <option value="Cyberpunk 2077">Cyberpunk 2077</option>
+                        <option value="PRO 2021">Pro 2021</option>
+                        <option value="GTA V">GTA V</option>
+                      </select><br><br>
+                    
+                    <label for="review_title">Title:</label><br>
+                    <input type="text" id="review_title" name="review_title"><br>
+                    
+                    <label for="review_content">Review:</label><br>
+                    <textarea id="reiew_content" name="review_content" rows="8" cols="50" placeholder="Is it good? Is it horrible? tell us!"></textarea>
+                     <br>
+                    <label for="rating">Game Score:<br>
+                    <input type="range" min="1.0" max="10.0" value="5" step="0.5" id="rating" name="rating" onchange=updateSlider(this.value)>
+                    <button class="btn" id="rangeslider">5</button>
+                    </label><br>
+                </div>
+                <div class="col-sm-6">
+                        <img  src="../Images/type_gif.gif" style="max-width: 80%; margin:auto; margin-top:15%;"> 
+                </div>
+                <center>
+                    <button class="btn btn-primary" type="submit">Submit</button><br><br>
+                </center>
+        </div>
+            
+        </form>
+    </div>
+
+    <script>
+        function updateSlider(val){
+            $("#rangeslider").html(val);
+        };
+    </script>
+</body>
+</html>
