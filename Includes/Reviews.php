@@ -51,7 +51,7 @@
             <div id="addyourown" class ="container container2" style="margin-top:25px;">
         <div class="row">
             <div class="col-sm-6">
-            <form name="Add a review!" method="post" action="Review_Form.php">
+            <form onsubmit="alertme()" name="Add a review!" method="post" action="Review_Form.php">
                
                     <label for="title">Reviewed Game:</label><br>
                     <select id="title" name="title">
@@ -61,10 +61,10 @@
                       </select><br><br>
                     
                     <label for="review_title">Title:</label><br>
-                    <input type="text" id="review_title" name="review_title"><br>
+                    <input type="text" id="review_title" name="review_title" minlength="3" maxlength="200" required><br>
                     
                     <label for="review_content">Review:</label><br>
-                    <textarea id="reiew_content" name="review_content" rows="8" cols="50" placeholder="Is it good? Is it horrible? tell us!"></textarea>
+                    <textarea id="reiew_content" name="review_content" rows="8" cols="50" placeholder="Is it good? Is it horrible? tell us!" minlength="10" maxlength="2500" required></textarea>
                      <br>
                     <label for="rating">Game Score:<br>
                     <input type="range" min="1.0" max="10.0" value="5" step="0.5" id="rating" name="rating" onchange=updateSlider(this.value)>
@@ -76,7 +76,7 @@
                         <img  src="../Images/type_gif.gif" style="max-width: 60%; margin:auto; margin-top:3%;"> 
                 </div>
                 <center>
-                    <button onclick="alertme()" class="btn btn-primary" type="submit">Submit</button><br><br>
+                    <button class="btn btn-primary" type="submit">Submit</button><br><br>
                 </center>
         </div>
             
