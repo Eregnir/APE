@@ -39,7 +39,6 @@
         
             <div class="container container2_2">
                 <center>
-                    <h1>x</h1>
                     <h1>Game Reviews</h1>
                     <h3>The biggest reviews library in the world.<br> it will be a blast!</h3>
                     <img src ="../Images/mario.gif" style="width: 10%;">
@@ -77,7 +76,7 @@
                         <img  src="../Images/type_gif.gif" style="max-width: 60%; margin:auto; margin-top:3%;"> 
                 </div>
                 <center>
-                    <button class="btn btn-primary" type="submit">Submit</button><br><br>
+                    <button onclick="alertme()" class="btn btn-primary" type="submit">Submit</button><br><br>
                 </center>
         </div>
             
@@ -93,7 +92,8 @@
 
                     <div class="container6 row" id="single podcast">
                         <!--This should contain the image from the DB of the review-->
-                        <div class="btn col-sm-2" style="margin: auto; cursor:alias;">
+                        <div class="btn col-lg-2" style="margin: auto; cursor:alias;">
+                            <h3 class="center"> User Rating: <span style="font-family: cursive;"><?php echo $review['rating'];?>/10 </span></h3>
                             <?php echo '<img style=" width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $review['image'] ).'"/>';?>
                         </div>
                         <!--This will contain the review itself-->
@@ -128,10 +128,13 @@
             $("#addyourown").show();
         };
 
+        function alertme(){
+            alert("Thanks for adding a review! You will now be redirected to the reviews page to view it.")
+        };
+
         function updateSlider(val){
             $("#rangeslider").html(val);
         };
-
         </script>
 
 

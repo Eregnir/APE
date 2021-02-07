@@ -1,4 +1,5 @@
 <?php
+
     $servername = "localhost";
     $username = "assafye";
     $password = "1forall!";
@@ -15,8 +16,13 @@
     $review_content = $_POST['review_content'];
     $rating = $_POST['rating'];
     $game_UID = $_POST['title'];
+    $rating = $_POST['rating'];
 
     $sql="INSERT INTO reviews (review_ID, review_content, game_UID, rating, rating_user, review_title, datetime) VALUES (NULL, '".$review_content."', '".$game_UID."', '".$rating."', 'Orly_B', '".$review_title."', CURRENT_TIMESTAMP)";
     
     $conn->query($sql);
+
+    header("Location: Reviews.php");
+    exit();
+
 ?>

@@ -22,7 +22,7 @@
             <!--Podcasts Intro-->
             <div class="container container2_2">
                 <center>
-                    <h1>Game Podcasts</h1>
+                    <canvas id="canvas" style="max-width: 40%;"></canvas>
                     <h3>Join us for our funny, witty, dumb, smart, boring conversations about gaming.<br> it will be a blast!</h3>
                     <img src ="../Images/podcast.png" style="width: 40%;">
                 </center>            
@@ -81,6 +81,13 @@
         $("#pd1").click(function(){
             window.location.href='Single Podcast.html';
         });
+
+        var canvas = document.getElementById("canvas");
+        var ctx=canvas.getContext("2d");
+        ctx.font="30px Comic Sans MS";
+        ctx.fillStyle = "black";
+        ctx.textAlign = "center";
+        ctx.fillText("Our Game Podcasts", canvas.width/2, canvas.height/2);
     </script>
 
 </body>
@@ -88,4 +95,3 @@
 <div id="footerph"></div>
 
 </html>
-
