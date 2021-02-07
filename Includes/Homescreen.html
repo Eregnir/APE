@@ -21,9 +21,8 @@
         </center>            
     </div>
 
-    <!--Game Gallery-->
     <div class = "row">
-        <div class="container container2 container4 col-lg-3">
+        <div class="container container2 container4 container7 col-lg-3">
             <center>
                 <div class = "game">
                     <h2>Our Game Reviews</h2>
@@ -33,7 +32,7 @@
                 </div>
             </center>
         </div>
-        <div class="container container2 container4 col-lg-3">
+        <div class="container container2 container4 container7 col-lg-3">
             <center>
                 <div class = "game">
                     <h2>Our Game Gallery</h2>
@@ -42,7 +41,7 @@
                 </div>
             </center>
         </div>
-        <div class="container container2 container4 col-lg-3">
+        <div class="container container2 container4 container7 col-lg-3">
             <center>
                 <div class = "game">
                     <h2>Our Game Podcasts</h2>
@@ -55,6 +54,15 @@
         
     </div>
 
+    <div class="btn-group center container container4" role="group" aria-label="Basic example" id="change-bg">
+        <center>
+            <h3 style="color:cornsilk">Need some change in your life? Try our Home-Screen in different colors!</h3>
+            <button onclick="changebg1()" type="button" class="btn btn-secondary">Original</button>
+            <button onclick="changebg2()" type="button" class="btn btn-secondary">Yellow Submarine</button>
+            <button onclick="changebg3()" type="button" class="btn btn-secondary">Blue Ocean</button>
+        </center>
+    </div>
+
     <script type="text/javascript">
         $(function(){
             $("#headerph").load("header.html");
@@ -62,6 +70,19 @@
         $(function(){
             $("#footerph").load("footer.html");
         });
+
+        function changebg1(){
+            $('body').css('background-image', 'url("../background.jpg")');
+        }
+
+        function changebg2(){
+            $('body').css('background-image', 'url("../Images/bg2.jpg")');
+        }
+
+        function changebg3(){
+            $('body').css('background-image', 'url("../Images/bg3.jpg")');
+        }
+
     </script>
 
 </body>

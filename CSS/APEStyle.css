@@ -85,6 +85,11 @@ footer{
     margin-bottom: 25px;
 }
 
+.container7:hover{
+    background-color: rgb(113, 224, 228);
+    border-color:cadetblue;
+}
+
 img{
     max-width: 600px;
 }
