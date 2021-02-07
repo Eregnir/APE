@@ -32,7 +32,7 @@
             } 
 
         
-            $sql = "SELECT title, image, review_content, game_UID, rating, rating_user, review_title, imag, datetime FROM reviews INNER JOIN products on products.UID = reviews.game_UID";
+            $sql = "SELECT title, image, review_content, game_UID, rating, rating_user, review_title, imag, datetime FROM reviews INNER JOIN products on products.UID = reviews.game_UID  ORDER BY datetime DESC";
 
             $result = $conn->query($sql);?>
             <!--Reviews Intro-->
@@ -48,9 +48,41 @@
             </div>
             
             <!--Add a review form-->
-            <div id="createform" style="margin-top:100px;">
-                
-            </div>
+
+            <div id="addyourown" class ="container container2" style="margin-top:25px;">
+        <div class="row">
+            <div class="col-sm-6">
+            <form name="Add a review!" method="post" action="Review_Form.php">
+               
+                    <label for="title">Reviewed Game:</label><br>
+                    <select id="title" name="title">
+                        <option value="2">Cyberpunk 2077</option>
+                        <option value="3">Tony Hawk's Pro Skater 1 + 2</option>
+                        <option value="1">GTA V</option>
+                      </select><br><br>
+                    
+                    <label for="review_title">Title:</label><br>
+                    <input type="text" id="review_title" name="review_title"><br>
+                    
+                    <label for="review_content">Review:</label><br>
+                    <textarea id="reiew_content" name="review_content" rows="8" cols="50" placeholder="Is it good? Is it horrible? tell us!"></textarea>
+                     <br>
+                    <label for="rating">Game Score:<br>
+                    <input type="range" min="1.0" max="10.0" value="5" step="0.5" id="rating" name="rating" onchange=updateSlider(this.value)>
+                    <button class="btn" id="rangeslider">5</button>
+                    </label><br>
+                </div>
+                <div class="col-sm-6">
+                    <h2 class = "center add-topp" style="font-family: cursive;">So, You want to add a review, eh?</h2>
+                        <img  src="../Images/type_gif.gif" style="max-width: 60%; margin:auto; margin-top:3%;"> 
+                </div>
+                <center>
+                    <button class="btn btn-primary" type="submit">Submit</button><br><br>
+                </center>
+        </div>
+            
+        </form>
+    </div>
 
             <div class="container container2 container4">
                 <center>
@@ -62,7 +94,7 @@
                     <div class="container6 row" id="single podcast">
                         <!--This should contain the image from the DB of the review-->
                         <div class="btn col-sm-2" style="margin: auto; cursor:alias;">
-                            <img id="pd1" class="center center5" src="<?php $review["imag"];?>.png" style=" width: 150px; border-radius: 50%;">   
+                            <?php echo '<img style=" width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $review['image'] ).'"/>';?>
                         </div>
                         <!--This will contain the review itself-->
                         <div class="col-lg-10">
@@ -72,7 +104,6 @@
                             <?php echo $review["review_content"]; ?></p>
                         </div>
                 </div>
-                <p>This is to know it works</p>
                 
                 <?php endforeach; ?>
 
@@ -90,11 +121,19 @@
         $(function(){
             $("#footerph").load("footer.html");
         });
-        
+
+        $("#addyourown").hide();
+
         function openForm(){
-            $("#createform").load("Review_Form.html");
+            $("#addyourown").show();
         };
+
+        function updateSlider(val){
+            $("#rangeslider").html(val);
+        };
+
         </script>
+
 
     </body>
 </html>

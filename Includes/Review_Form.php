@@ -14,8 +14,9 @@
     $review_title = $_POST['review_title'];
     $review_content = $_POST['review_content'];
     $rating = $_POST['rating'];
+    $game_UID = $_POST['title'];
 
-    $sql="INSERT INTO reviews (review_ID, review_content, game_UID, rating, rating_user, review_title, datetime) VALUES ('123', '".$review_content."', '2', '".$rating."', 'Orly_B', '".$review_title."', CURRENT_TIMESTAMP)";
+    $sql="INSERT INTO reviews (review_ID, review_content, game_UID, rating, rating_user, review_title, datetime) VALUES (NULL, '".$review_content."', '".$game_UID."', '".$rating."', 'Orly_B', '".$review_title."', CURRENT_TIMESTAMP)";
     
     $conn->query($sql);
 ?>
