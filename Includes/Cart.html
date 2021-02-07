@@ -60,7 +60,7 @@
                         <center>
                             <h3><b>Total: $
                                 <span id = "demo">100</b></h3></span> <br><br>
-                            <button style="width:85%;" class="btn btn-primary"><h3>Proceed to checkout</h3></button>
+                            <button onclick="nom()" style="width:85%;" class="btn btn-primary"><h3>Proceed to checkout</h3></button>
                         </center>
                     </div>
                     <div class ="col-lg-7 row">
@@ -88,9 +88,12 @@
             var B = document.getElementById("q1").value;
             var C = document.getElementById("q2").value;
             document.getElementById("demo").innerHTML = B*A + C*A;
-
-
         }
+        
+        function nom(){
+            window.alert("Action not supported in the project's scope.");
+        };
+
     </script>
 </body>
 
