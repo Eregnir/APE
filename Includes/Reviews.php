@@ -56,7 +56,7 @@
                     <label for="title">Reviewed Game:</label><br>
                     <select id="title" name="title">
                         <option value="2">Cyberpunk 2077</option>
-                        <option value="3">Tony Hawk's Pro Skater 1 + 2</option>
+                        <option value="3">Tony Hawk's Pro Skater 1+2</option>
                         <option value="1">GTA V</option>
                       </select><br><br>
                     
