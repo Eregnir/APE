@@ -1,4 +1,4 @@
-<html>
+<html></html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -52,20 +52,37 @@
         <div class="row">
             <div class="col-sm-6">
             <form onsubmit="alertme()" name="Add a review!" method="post" action="Review_Form.php">
-               
-                    <label for="title">Reviewed Game:</label><br>
-                    <select id="title" name="title">
-                        <option value="2">Cyberpunk 2077</option>
-                        <option value="3">Tony Hawk's Pro Skater 1+2</option>
-                        <option value="1">GTA V</option>
-                      </select><br><br>
+                <!--Reviewed game-->
+
+                    <label for="title"></label><br>
                     
-                    <label for="review_title">Title:</label><br>
-                    <input type="text" id="review_title" name="review_title" minlength="3" maxlength="200" required><br>
+                    <div>
+                    <div class="input-group-text">Reviewed Game:</div>
+                        <select class="form-control" id="title" name="title">
+                            <option value="2">Cyberpunk 2077</option>
+                            <option value="3">Tony Hawk's Pro Skater 1+2</option>
+                            <option value="1">GTA V</option>
+                          </select><br>
+                    </div>
+
+                    <!--Review Title-->
+                    <label for="review_title"></label><br>
+                    <div>
+                        <div class="input-group-text">Title:</div>
+                        <input placeholder="Short, yet informative!" type="text" class="form-control" id="review_title" name="review_title" minlength="3" maxlength="200" required><br>
+                    </div>
                     
-                    <label for="review_content">Review:</label><br>
-                    <textarea id="reiew_content" name="review_content" rows="8" cols="50" placeholder="Is it good? Is it horrible? tell us!" minlength="10" maxlength="2500" required></textarea>
-                     <br>
+                    <!--Review Content-->
+                    
+                    <div class="input-group-text">
+                        <label for="review_content">Review:</label><br></div>
+                        
+                        <div class="input-group">
+                            <textarea class="form-control" id="reiew_content" name="review_content" rows="8" cols="50" placeholder="Is it good? Is it horrible? tell us!" minlength="10" maxlength="2500" required></textarea>
+                        </div> 
+                                        
+                    <br>
+                    <!--Review Score-->
                     <label for="rating">Game Score:<br>
                     <input type="range" min="1.0" max="10.0" value="5" step="0.5" id="rating" name="rating" onchange=updateSlider(this.value)>
                     <button class="btn" id="rangeslider">5</button>
@@ -88,6 +105,7 @@
                     <h1>Game Reviews</h1>
                 </center>
                 <br>
+
                 <?php foreach ($result as $review): ?>
 
                     <div class="container6 row" id="single podcast">
@@ -96,6 +114,7 @@
                             <h3 class="center"> User Rating: <span style="font-family: cursive;"><?php echo $review['rating'];?>/10 </span></h3>
                             <?php echo '<img style=" width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $review['image'] ).'"/>';?>
                         </div>
+
                         <!--This will contain the review itself-->
                         <div class="col-lg-10">
                             <h3><?php $review["review_title"];?></h3>
@@ -108,6 +127,7 @@
                 <?php endforeach; ?>
 
                 <br>
+                <button onclick="scrollToTop()" style="margin-bottom:1px;" class="center btn btn-outline-dark" type="button">Back to top</button>
 
             </div>
 
