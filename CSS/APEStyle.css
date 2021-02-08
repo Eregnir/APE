@@ -1,4 +1,7 @@
-
+html {
+    scroll-behavior: smooth;
+  }
+  
 body {
     background-image:url(../background.jpg);
     background-attachment: fixed;

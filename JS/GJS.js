@@ -76,7 +76,6 @@ $("#btnc1").click(function test1() {
         }
     });
     
-
 $("#btnc2").click(function test2() {
     if ($(this).is(":checked")) {
         $("#r2").show();
@@ -104,10 +103,7 @@ $("#btnall").click(function() {
     $("#r4").show();
 });
 
-//Canvas
-    var canvas = document.getElementById("canvas");
-    var ctx=canvas.getContext("2d");
-    ctx.font="30px Comic Sans MS";
-    ctx.fillStyle = "black";
-    ctx.textAlign = "center";
-    ctx.fillText("Our Game Podcasts", canvas.width/2, canvas.height/2);
+//Back to top:
+function scrollToTop(){
+    document.documentElement.scrollTop = 0;
+}

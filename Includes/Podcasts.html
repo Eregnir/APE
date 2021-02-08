@@ -65,9 +65,19 @@
                     </div>
                 </div>
                 <br>
+                <button onclick="scrollToTop()" style="margin-bottom:1px;" class="center btn btn-outline-dark" type="button">Back to top</button>
+                <br>
             </div>
-
         </div>
+        <script>
+            var canvas = document.getElementById("canvas");
+            var ctx=canvas.getContext("2d");
+            ctx.font="30px Comic Sans MS";
+            ctx.fillStyle = "black";
+            ctx.textAlign = "center";
+            ctx.fillText("Our Game Podcasts", canvas.width/2, canvas.height/2);
+        </script>
+
     <script type="text/javascript" src="../JS/GJS.js"></script>
 
 
