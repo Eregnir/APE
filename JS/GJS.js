@@ -63,6 +63,47 @@ $("#pd1").click(function(){
     window.location.href='Single Podcast.html';
 });
 
+
+//---GAME GALLERY---
+//Filter by price function
+$("#btnc1").click(function test1() {
+    if ($(this).is(":checked")) {
+        $("#r4").show();
+        $("#r3").show();
+        } else {
+            $("#r4").hide();
+            $("#r3").hide();
+        }
+    });
+    
+
+$("#btnc2").click(function test2() {
+    if ($(this).is(":checked")) {
+        $("#r2").show();
+        } else {
+            $("#r2").hide();
+        }
+    });
+
+$("#btnc3").click(function test3() {
+    if ($(this).is(":checked")) {
+        $("#r1").show();
+        } else {
+            $("#r1").hide();
+        }
+    });
+
+//Clear filters function
+$("#btnall").click(function() {
+    $('#btnc1').prop('checked', true);
+    $('#btnc2').prop('checked', true);
+    $('#btnc3').prop('checked', true);
+    $("#r1").show();
+    $("#r2").show();
+    $("#r3").show();
+    $("#r4").show();
+});
+
 //Canvas
     var canvas = document.getElementById("canvas");
     var ctx=canvas.getContext("2d");

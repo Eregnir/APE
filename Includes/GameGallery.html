@@ -8,7 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="../CSS/APEStyle.css">
     
 </head>
@@ -24,11 +25,28 @@
                     <img src ="../Images/playing-together.png" style="width: 70%;">
                 </center>
 
-                
             </div>
+
             <!--Game Gallery-->
+
+            <!--Game Filters-->
+            <center>
+                <div class="btn-group center container container6" style="margin-top:15px;" role="group" aria-label="Basic checkbox toggle button group">
+                    <h3 style="color:cornsilk">Filter by price:</h3>
+                    <input type="checkbox" class="btn-check" id="btnc1" autocomplete="off" checked="true">
+                    <label style="border-radius: 15px;" class="btn btn-outline-primary" for="btnc1">$0-$39</label>
+                  
+                    <input type="checkbox" class="btn-check" id="btnc2" autocomplete="off" checked="true" >
+                    <label style="border-radius: 15px;" class="btn btn-outline-primary" for="btnc2">$40-$49</label>
+                  
+                    <input type="checkbox" class="btn-check" id="btnc3" autocomplete="off" checked="true">
+                    <label style="border-radius: 15px;" class="btn btn-outline-primary" for="btnc3">$50</label>
+                    <br>
+                    <button type="button" class="btn btn-success" id="btnall" style="margin-bottom:10px; border-radius: 15px;" >Clear Filter</button>
+                  </div>
+            </center>
             <!--Row 1-->
-            <div class = "row">
+            <div id="r1" class = "row">
                 <div class="container container2 container4 col-lg-3">
                     <center>
                         <a href="Games-cp.html">
@@ -57,7 +75,7 @@
                             <div style="color:black;" class = "game">
                                 <img class = "img2" alt="XBOX" src="../Images/Tony Hawk Pro Skater 1+2.jpg" style="display: block;">
                                 <br>Tony Hawk Pro Skater 1+2<br>
-                                <div class="input-group-text center" style="background-color:rgb(178, 167, 230); font-size: 20pt;"><b>$40.00</b></div><br>
+                                <div class="input-group-text center" style="background-color:rgb(178, 167, 230); font-size: 20pt;"><b>$53.00</b></div><br>
                             </div>
                        </a>
                     </center>
@@ -66,13 +84,13 @@
             </div>
             <!--Row 2-->
             <div id ="nom" onclick="nom()">
-                <div class = "row">
+                <div id="r2" class = "row">
                     <div class="container container2 container4 col-lg-3">
                         <center>
                             <div class = "game">
                                 <img class="img2" alt="XBOX" src="../Images/Sims4.jpg" style="display: block;">
                                 <br>Sims 4<br>
-                                <div class="input-group-text center" style="background-color:rgb(178, 167, 230); font-size: 20pt;"><b>$27.00</b></div><br>
+                                <div class="input-group-text center" style="background-color:rgb(178, 167, 230); font-size: 20pt;"><b>$44.00</b></div><br>
                             </div>
                         </center>
                     </div>
@@ -81,7 +99,7 @@
                             <div class = "game">
                                 <img class="img2" alt="XBOX" src="../Images/Avengers.jpg" style="display: block;">
                                 <br>Avengers<br>
-                                <div class="input-group-text center" style="background-color:rgb(178, 167, 230); font-size: 20pt;"><b>$19.00</b></div><br>
+                                <div class="input-group-text center" style="background-color:rgb(178, 167, 230); font-size: 20pt;"><b>$47.00</b></div><br>
                             </div>
                         </center>
                     </div>
@@ -90,20 +108,20 @@
                             <div class = "game">
                                 <img class = "img2" alt="XBOX" src="../Images/Pokemon.jpg" style="display: block;">
                                 <br>Pokemon Shield and Sword<br>
-                                <div class="input-group-text center" style="background-color:rgb(178, 167, 230); font-size: 20pt;"><b>$60.00</b></div><br>
+                                <div class="input-group-text center" style="background-color:rgb(178, 167, 230); font-size: 20pt;"><b>$45.00</b></div><br>
                             </div>
                         </center>
                     </div>
                     
                 </div>
                 <!--Row 3-->
-                <div class = "row">
+                <div id="r3"  class = "row">
                     <div class="container container2 container4 col-lg-3">
                         <center>
                             <div class = "game">
                                 <img class="img2" alt="XBOX" src="../Images/COD Black Ops.jpg" style="display: block;">
                                 <br>Call Of Duty - Black Ops<br>
-                                <div class="input-group-text center" style="background-color:rgb(178, 167, 230); font-size: 20pt;"><b>$44.00</b></div><br>
+                                <div class="input-group-text center" style="background-color:rgb(178, 167, 230); font-size: 20pt;"><b>$30.00</b></div><br>
                             </div>
                         </center>
                     </div>
@@ -112,7 +130,7 @@
                             <div class = "game">
                                 <img class="img2" alt="XBOX" src="../Images/Star Wars Squadrons.jpg" style="display: block;">
                                 <br>Star Wars Squadrons<br>
-                                <div class="input-group-text center" style="background-color:rgb(178, 167, 230); font-size: 20pt;"><b>$27.00</b></div><br>
+                                <div class="input-group-text center" style="background-color:rgb(178, 167, 230); font-size: 20pt;"><b>$37.00</b></div><br>
                             </div>
                         </center>
                     </div>
@@ -128,13 +146,13 @@
                     
                 </div>
                 <!--Row 4-->
-                <div class = "row">
+                <div id="r4" class = "row">
                     <div class="container container2 container4 col-lg-3">
                         <center>
                             <div class = "game">
                                 <img class="img2" alt="XBOX" src="../Images/Ride4.jpg" style="display: block;">
                                 <br>Ride 4<br>
-                                <div class="input-group-text center" style="background-color:rgb(178, 167, 230); font-size: 20pt;"><b>$30.00</b></div><br>
+                                <div class="input-group-text center" style="background-color:rgb(178, 167, 230); font-size: 20pt;"><b>$29.00</b></div><br>
                             </div>
                         </center>
                     </div>              
@@ -143,6 +161,10 @@
             </div>
         </div>
         
+        <script>
+            
+        </script>
+
     <script type="text/javascript" src="../JS/GJS.js"></script>
 
     <div id="footerph"></div>
