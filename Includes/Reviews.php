@@ -134,8 +134,5 @@
         </div>
         <div id="footerph"></div>
     <script type="text/javascript" src="../JS/GJS.js"></script>
-
-
-
     </body>
 </html>
