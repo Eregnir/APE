@@ -113,29 +113,8 @@
 
         </div>
         <div id="footerph"></div>
+    <script type="text/javascript" src="../JS/GJS.js"></script>
 
-        <script type="text/javascript">
-        $(function(){
-            $("#headerph").load("header.html");
-        });
-        $(function(){
-            $("#footerph").load("footer.html");
-        });
-
-        $("#addyourown").hide();
-
-        function openForm(){
-            $("#addyourown").show();
-        };
-
-        function alertme(){
-            alert("Thanks for adding a review! You will now be redirected to the reviews page to view it.")
-        };
-
-        function updateSlider(val){
-            $("#rangeslider").html(val);
-        };
-        </script>
 
 
     </body>
